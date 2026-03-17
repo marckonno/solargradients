@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sky Time Preview</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <img src="image.php" id="sky">
+  
+  <script>
+    // Refresh every 5 minutes
+    setInterval(() => {
+      document.getElementById('sky').src = 'image.php?t=' + Date.now();
+    }, 300000);
+  </script>
+</body>
+</html>
