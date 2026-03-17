@@ -20,7 +20,7 @@ $index = floor($totalMinutes / $minutesPerImage);
 $imageNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
 
 // Image path
-$imagePath = "images/$imageNumber.jpg";
+$imagePath = "$imageNumber.jpeg";
 
 // Output image
 header('Content-Type: image/jpeg');
